@@ -1,0 +1,26 @@
+#include <stdio.h>
+//Sum of even valued terms of a Fibonnaci Series
+int main() {
+    int i=1,s=0,j=0,k=0,a=0,v=0,b=0,arr[1000];
+    arr[0]=0;
+    while(v<4000000){//Term of value that do not exceed 4 million
+        k=i+j;
+        v=j+k;
+        arr[b]=v;
+        i=j;
+        j=k;
+        a++;
+        b++;
+    }
+    printf("No. of terms:%d\nTerms of Fibonacci Series:\n",a);
+    for(int i=0;i<=a-2;i++){
+        if(arr[i]%2==0){
+            s=s+arr[i];
+        }
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    printf("Sum of Even valued terms:");
+    printf("%d",s);
+    return 0;
+}
