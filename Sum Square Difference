@@ -1,0 +1,11 @@
+//Differnce between  the sum of the squares of the first hundred  natural numbers and the square of the sum.
+#include <stdio.h>
+int main() {
+    int s=0,s1=0;
+    for(int i=1;i<=100;i++){
+        s=s+i*i;
+        s1=s1+i;
+    }
+    printf("%d",(s1*s1)-s);//Output-25164150
+    return 0;
+}
