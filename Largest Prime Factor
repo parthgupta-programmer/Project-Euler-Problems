@@ -1,0 +1,41 @@
+//Largest Prime Factor of the number 600851475143
+#include <stdio.h>
+int pr_ch(int N);//Function to check if a number is a prime
+
+int main() {
+    long int n,i=1,k=0;
+    printf("Enter the number:");
+    scanf("%ld",&n);//inputting here as an example:600851475143
+    while(i<=n){//Loop finding the prime factors of the number
+        if(pr_ch(i)==1 && (n%i==0)){
+              n=n/i;
+              k++;
+        }
+        else{
+             i++;
+        }
+    }
+    printf("Largest Prime Factor:%ld",i);//Printing largest prime factor number(output:6857)
+    
+    return 0;
+}
+
+int pr_ch(int N){
+    
+    int s=1;
+    for(int i=2;i<=N-1;i++){
+        if(N%i==0){
+            return 0;
+        }
+        else{
+            s++;
+        }
+    }
+    if(s==N-1){
+        return 1;
+    }
+}
+
+
+
+
