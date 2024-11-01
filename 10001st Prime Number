@@ -1,0 +1,24 @@
+//10001st Prime Number
+
+#include <stdio.h>
+
+int main(){
+    long long int k,a=1,j=2,s=1,max=0;
+    while(s<=10001){//loop for 10001 st Prime Number
+        k=0;
+        for(int i=2;i<=j-1;i++){
+            if(j%i!=0){
+                k++;
+            }
+        }
+        if(k==(j-2)){//checking if j a prime number
+                max=j;
+            }
+           
+        j++;
+    }
+    
+    printf("%d ",max);//printing 10001 st a Prime Number
+    
+    return 0;
+}
