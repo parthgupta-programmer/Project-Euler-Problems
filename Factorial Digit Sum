@@ -1,0 +1,16 @@
+//Sum of the digits of the factorial
+#include <stdio.h>
+int main(){
+    long long int n,f=1,s=0;;
+    scanf("%lld",&n);
+    for(int i=n;i>=1;i--){
+        f=f*i;
+    }
+    n=f;
+    while(f!=0){
+        s=s+f%10;
+        f=f/10;
+    }
+    printf("%lld %lld",n,s);
+    return 0;
+}
